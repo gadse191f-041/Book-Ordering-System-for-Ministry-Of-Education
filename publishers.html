@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>publishers page</title>
+    <link rel="stylesheet" href="publishers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="side-bar">
+      <div class="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="menu">
+        <div class="item"><a href="#"><i class="fas fa-desktop"></i>Choice</a></div>
+        <div class="item"><a href="home.html"><i class="fas fa-th"></i>Home</a></div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-table"></i>Reader Favorites<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="just released.html" class="sub-item">Just released</a>
+            <a href="best sellers.html" class="sub-item">Best Sellers</a>
+            <a href="comming soon.html" class="sub-item">Comming Soon</a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-table"></i>Reader Types<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Kids</a>
+            <a href="#" class="sub-item">Religion</a>
+            <a href="#" class="sub-item">Teens</a>
+            <a href="#" class="sub-item">Business</a>
+            <a href="#" class="sub-item">Science & Fiction</a>
+          </div>
+        </div>
+       
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-cogs"></i>Settings<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="are you.html" class="sub-item">Are you..</a>
+            <a href="#" class="sub-item">Submit Manuscript</a>
+          </div>
+        </div>
+        <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About</a></div>
+      </div>
+    </div>
+    <section class="main">
+      <h1>Publishers<br>page</h1>
+    </section>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      //jquery for toggle sub menus
+      $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+      });
+
+      //jquery for expand and collapse the sidebar
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+      });
+
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+    });
+    </script>
+
+  </body>
+</html>
